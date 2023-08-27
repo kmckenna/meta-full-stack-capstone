@@ -20,8 +20,8 @@ class MenuItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MenuItem
-        # fields = ['user', 'id', 'title', 'price', 'inventory']
-        fields = ['user', 'id', 'title', 'price','inventory'] #, 'category', 'category_id']
+        fields =  '__all__'
+        # fields = ['user', 'id', 'title', 'price','inventory'] #, 'category', 'category_id']
 
 
 class BookingSerializer(serializers.ModelSerializer):
@@ -33,7 +33,7 @@ class BookingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Booking
-        fields = ['name', 'no_of_quests', 'booking_date']
+        fields =  '__all__'
 
 
 
