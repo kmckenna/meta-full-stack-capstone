@@ -1,9 +1,13 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 
 urlpatterns = [
     path('', views.index, name="index"),
+    # path('restaurant/', include('restaurant.urls')),
+    path('menu/', views.MenuItemsView.as_view()),
+    path('menu/<int:pk>', views.SingleMenuItemView.as_view()),
+
     # path('about/', views.about, name="about"),
     # path('book/', views.book, name="book"),
     # path('menu/', views.menu, name="menu"),
