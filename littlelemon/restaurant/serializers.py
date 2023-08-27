@@ -10,7 +10,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['url', 'username', 'email', 'groups']
 
 
-
 class MenuItemSerializer(serializers.ModelSerializer):
 
     user = serializers.PrimaryKeyRelatedField(

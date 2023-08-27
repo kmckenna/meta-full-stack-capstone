@@ -4,16 +4,17 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import generics, status, viewsets, permissions
 from .models import MenuItem, Booking
-from .serializers import MenuItemSerializer, BookingSerializer
+from .serializers import MenuItemSerializer, BookingSerializer, UserSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html', {})
 
-class UserViewSet(viewsets.GenericViewSet):
+class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
-    permission_classes = IsAuthenticated
+    serializer_class = UserSerializer
+
 
 
 # @api_view(['POST', 'GET'])
