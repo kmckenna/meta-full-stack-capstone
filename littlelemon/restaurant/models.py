@@ -15,6 +15,9 @@ class MenuItem(models.Model):
     inventory = models.SmallIntegerField()
     # category = models.ForeignKey('Category', on_delete=models.PROTECT, default=1)
 
+    def get_item(self):
+        return f'{self.title} : {str(self.price)}'
+
     def __str__(self):
         return self.name
 
