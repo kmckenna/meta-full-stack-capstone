@@ -19,7 +19,8 @@ class MenuItem(models.Model):
         return f'{self.title} : {str(self.price)}'
 
     def __str__(self):
-        return self.name
+        return f'{self.title} : {str(self.price)}'
+        # return self.name
 
 # class Category(models.Model):
 #     slug = models.SlugField()
