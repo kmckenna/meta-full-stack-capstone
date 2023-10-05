@@ -1,0 +1,66 @@
+[
+  {
+    "model": "restaurant.category",
+    "pk": 1,
+    "fields": {
+      "title": "Desserts",
+      "slug": "desserts"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 2,
+    "fields": {
+      "title": "Pasta",
+      "slug": "pasta"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 3,
+    "fields": {
+      "title": "Salads",
+      "slug": "salads"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 4,
+    "fields": {
+      "title": "Chicken",
+      "slug": "chicken"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 5,
+    "fields": {
+      "title": "Specials",
+      "slug": "specials"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 6,
+    "fields": {
+      "title": "Beef",
+      "slug": "beef"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 7,
+    "fields": {
+      "title": "Seafood",
+      "slug": "seafood"
+    }
+  },
+  {
+    "model": "restaurant.category",
+    "pk": 8,
+    "fields": {
+      "title": "Drinks",
+      "slug": "drinks"
+    }
+  }
+]

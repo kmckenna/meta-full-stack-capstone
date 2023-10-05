@@ -1,0 +1,222 @@
+[
+  {
+    "model": "restaurant.menuitem",
+    "pk": 1,
+    "fields": {
+      "title": "Chocolate Pie",
+      "price": 12.43,
+      "inventory": 5,
+      "category": 1
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 2,
+    "fields": {
+      "title": "Ice Cream",
+      "price": 9.07,
+      "inventory": 5,
+      "category": 1
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 3,
+    "fields": {
+      "title": "Banana Cookies",
+      "price": 8.9,
+      "inventory": 4,
+      "category": 1
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 4,
+    "fields": {
+      "title": "Penne",
+      "price": 4.34,
+      "inventory": 2,
+      "category": 2
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 5,
+    "fields": {
+      "title": "Linguine",
+      "price": 3.44,
+      "inventory": 9,
+      "category": 2
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 6,
+    "fields": {
+      "title": "Carbonari",
+      "price": 5.32,
+      "inventory": 4,
+      "category": 2
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 7,
+    "fields": {
+      "title": "Cobb",
+      "price": 2.39,
+      "inventory": 2,
+      "category": 3
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 8,
+    "fields": {
+      "title": "Ceasar",
+      "price": 4.72,
+      "inventory": 2,
+      "category": 3
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 9,
+    "fields": {
+      "title": "Greek",
+      "price": 3.5,
+      "inventory": 2,
+      "category": 3
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 10,
+    "fields": {
+      "title": "Fried Cutlet",
+      "price": 6.21,
+      "inventory": 7,
+      "category": 4
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 11,
+    "fields": {
+      "title": "Grilled",
+      "price": 4.13,
+      "inventory": 6,
+      "category": 4
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 12,
+    "fields": {
+      "title": "Baked",
+      "price": 10.81,
+      "inventory": 2,
+      "category": 4
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 13,
+    "fields": {
+      "title": "Calamari Portuguese",
+      "price": 24.84,
+      "inventory": 10,
+      "category": 5
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 14,
+    "fields": {
+      "title": "Shrimp Au Gratin",
+      "price": 7.65,
+      "inventory": 1,
+      "category": 5
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 15,
+    "fields": {
+      "title": "Rib-eye",
+      "price": 3.69,
+      "inventory": 4,
+      "category": 6
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 16,
+    "fields": {
+      "title": "Romanian",
+      "price": 19.66,
+      "inventory": 8,
+      "category": 6
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 17,
+    "fields": {
+      "title": "Broiled Tilapia",
+      "price": 5.57,
+      "inventory": 7,
+      "category": 7
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 18,
+    "fields": {
+      "title": "Stuffed Salmon",
+      "price": 8.56,
+      "inventory": 9,
+      "category": 7
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 19,
+    "fields": {
+      "title": "Shrimp",
+      "price": 11.73,
+      "inventory": 5,
+      "category": 7
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 20,
+    "fields": {
+      "title": "Coffee",
+      "price": 12.57,
+      "inventory": 7,
+      "category": 8
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 21,
+    "fields": {
+      "title": "Soda",
+      "price": 14.24,
+      "inventory": 2,
+      "category": 8
+    }
+  },
+  {
+    "model": "restaurant.menuitem",
+    "pk": 22,
+    "fields": {
+      "title": "Milkshake",
+      "price": 1.31,
+      "inventory": 6,
+      "category": 8
+    }
+  }
+]
