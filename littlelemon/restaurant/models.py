@@ -1,19 +1,32 @@
 from django.db import models
+# import datetime
+from django.core.validators import MinValueValidator, MaxValueValidator
+# from django.core.exceptions import ValidationError
+
+
 
 # Create your models here.
 class Booking(models.Model):
-
     name = models.CharField(max_length=255)
-    no_of_guests = models.SmallIntegerField()
+    no_of_guests = models.SmallIntegerField(
+        validators=[
+            MaxValueValidator(12),
+            MinValueValidator(1)
+        ])
     booking_date = models.DateField()
-    booking_time = models.TimeField(null=True)
+    booking_time = models.TimeField()
 
+    def __str__(self):
+        return f'{self.name} has booked {self.no_of_guests} for {self.booking_date} at {self.booking_time}'
 
 
 class MenuItem(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, unique=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    inventory = models.SmallIntegerField()
+    inventory = models.SmallIntegerField(
+        validators=[
+            MaxValueValidator(50)
+        ])
     category = models.ForeignKey('Category', on_delete=models.PROTECT, default=1)
 
     def get_item(self):
@@ -21,31 +34,11 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return f'{self.title} : {str(self.price)}'
-        # return self.name
+
 
 class Category(models.Model):
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=255, unique=True)
     title = models.CharField(max_length=255, unique=True)
-
-    # created = models.DateTimeField(auto_now_add=True)
-    # created_by = models.ForeignKey(
-    #     User, on_delete=models.CASCADE, default=1)
-
-    # modified = models.DateTimeField(auto_now_add=True)
-    # modified_by = models.ForeignKey(
-    #     User, on_delete=models.CASCADE, default=1)
 
     def __str__(self) -> str:
         return self.title
-
-
-# class MenuItem(models.Model):
-#     title = models.CharField(max_length=255, unique=True)
-#     price = models.DecimalField(max_digits=6, decimal_places=2)
-#     inventory = models.SmallIntegerField()
-#     # category = models.ForeignKey('Category', on_delete=models.PROTECT, default=1)
-#
-    #
-    # def __str__(self) -> str:
-    #     return self.title
-    #
