@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'restaurant',
     'rest_framework',
     'rest_framework.authtoken',
-    'djoser',
+    # 'djoser',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +140,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': 5,
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.TokenAuthentication',
@@ -159,8 +159,6 @@ REST_FRAMEWORK = {
 #         'rest_framework.filters.OrderingFilter',
 #         'rest_framework.filters.SearchFilter',
 #     ],
-#     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-#     'PAGE_SIZE': 2,
 #     ],
 #     'DEFAULT_THROTTLE_CLASSES': [
 #         'rest_framework.throttling.AnonRateThrottle',
@@ -179,4 +177,6 @@ DJOSER = {
 }
 
 
-FIXTURE_DIRS = ['fixtures']
+FIXTURE_DIRS = [
+    'fixtures',
+]

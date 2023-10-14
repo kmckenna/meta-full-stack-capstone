@@ -17,13 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from restaurant.views import BookingViewSet, UserViewSet, MenuItemViewSet, GroupViewSet
+from restaurant.views import BookingViewSet, UserViewSet, MenuItemViewSet, GroupViewSet, CategoryViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet, "user")
-router.register(r'groups', UserViewSet, "group")
-router.register(r'tables', BookingViewSet, "table")
+router.register(r'groups', GroupViewSet, "group")
+router.register(r'bookings', BookingViewSet, "table")
+router.register(r'categories', CategoryViewSet, "category")
 router.register(r'menuitems', MenuItemViewSet, "menuitem")
 
 urlpatterns = [
@@ -32,7 +33,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     #add following lines to update urlpatterns list
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken'))
+    # path('auth/', include('djoser.urls')),
+    # path('auth/', include('djoser.urls.authtoken'))
 ]
 

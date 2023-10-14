@@ -18,11 +18,6 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ['url', 'name']
 
 class MenuItemSerializer(serializers.ModelSerializer):
-    user = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.all(),
-        default=serializers.CurrentUserDefault()
-    )
-
     class Meta:
         model = MenuItem
         fields = '__all__'
@@ -30,19 +25,12 @@ class MenuItemSerializer(serializers.ModelSerializer):
 
 
 class BookingSerializer(serializers.ModelSerializer):
-    user = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.all(),
-        default=serializers.CurrentUserDefault()
-    )
-
     class Meta:
         model = Booking
         fields = '__all__'
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    created_by = serializers.HiddenField(
-        default=serializers.CurrentUserDefault())
 
     class Meta:
         model = Category

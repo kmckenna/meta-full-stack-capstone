@@ -4,24 +4,24 @@ from django.urls import reverse
 
 class MenuItemListViewTest(TestCase):
 
-    @classmethod
-    def setUpTestData(cls):
-        # Create 13 menuitems for pagination tests
-        number_of_menuitems = 4
-
-        for menuitem_id in range(number_of_menuitems):
-            MenuItem.objects.create(
-                title=f'Yummy Menu Item: {menuitem_id}',
-                price=menuitem_id * 3.00,
-                inventory=menuitem_id,
-            )
+    # @classmethod
+    # def setUpTestData(cls):
+    #     # Create 13 menuitems for pagination tests
+    #     number_of_menuitems = 4
+    #
+    #     for menuitem_id in range(number_of_menuitems):
+    #         MenuItem.objects.create(
+    #             title=f'Yummy Menu Item: {menuitem_id}',
+    #             price=menuitem_id * 3.00,
+    #             inventory=menuitem_id,
+    #         )
 
 
     def test_getall(self):
         pass
 
     def test_view_url_exists_at_desired_location(self):
-        response = self.client.get('/menu/')
+        response = self.client.get('/api/menuitems/')
         self.assertEqual(response.status_code, 200)
     #
     # def test_view_url_accessible_by_name(self):
