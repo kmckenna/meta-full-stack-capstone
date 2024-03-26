@@ -4,8 +4,7 @@ Coursera Meta Backend Capstone
 MySQL Database
 'ENGINE': 'django.db.backends.mysql',
 'NAME': 'reservations',
-'USER' : 'root',
-'PASSWORD' : 'root@123'
+
 
 Load Data
 python manage.py loaddata Category.json
